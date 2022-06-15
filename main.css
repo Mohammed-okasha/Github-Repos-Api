@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fetch Githup Repos */
+    .repos-container {
+        max-width: 800px;
+        width: 100%;
+        padding: 0 15px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .repos-container .title {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+        text-transform: capitalize;
+        position: relative;
+    }
+    .repos-container .text {
+        margin-bottom: 5px;
+    }
+
+    .repos-container span {
+        color: #777;
+    }
+
+    .repos-container .get-repos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .repos-container .get-repos input[type="text"] {
+        outline: none;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #afafaf transparent #afafaf #afafaf;
+        width: 350px;
+        height: 45px;
+        padding: 0 10px;
+        color: #333;
+        caret-color: brown;
+        font-size: 15px;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .repos-container .get-repos .get-btn {
+        padding: 0 15px;
+        height: 45px;
+        cursor: pointer;
+        background-color: brown;
+        color: #fff;
+        border: none;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .repos-container .show-data {
+        padding: 20px;
+        background-color: #333;
+        min-height: 100px;
+        max-height: 320px;
+        overflow: auto;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .2);
+    }
+
+    .repos-container .show-data span {
+        color: #fff;
+    }
+
+    .repos-container .show-data::-webkit-scrollbar {
+        width: 3px;
+    }
+    .repos-container .show-data::-webkit-scrollbar-track {
+        background-color: #eee;
+        box-shadow: 2px 0px 5px 0 #eee inset;
+    }
+    .repos-container .show-data::-webkit-scrollbar-thumb {
+        background-color: rgba(165, 42, 42, 0.65);
+    }
+
+    @media(max-width: 600px) {
+        .repos-container .get-repos input[type="text"],
+        .repos-container .get-repos .get-btn {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .repos-container .get-repos input[type="text"] {
+            border: 1px solid #afafaf;
+        }
+        .repos-container .get-repos .get-btn {
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+    }
+
+    /* Main Div Creating By Js */
+    .show-data .repo-box {
+        background-color: #fff;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        padding: 15px;
+    }
+    
+    .show-data .repo-box:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    
+    .repo-box .list {
+        list-style: none;
+    }
+    
+    .repo-box .list li {
+        margin-bottom: .5rem;
+        color: #333;
+        text-transform: capitalize;
+    }
+    
+    .show-data .repo-box a:any-link,
+    .show-data .repo-box span {
+        color: #fff;
+        display: inline-block;
+        padding: 8px 20px;
+        border-radius: 3px;
+        margin-top: 10px;
+    }
+    
+    
+    .show-data .repo-box a:any-link {
+        text-decoration: none;
+        background-color: #333;
+    }
+    
+    .show-data .repo-box span {
+        background-color: brown;
+        margin-right: 5px;
+    }
